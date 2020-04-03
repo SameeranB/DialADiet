@@ -1,0 +1,1 @@
+web: gunicorn DialADiet.wsgi --log-file -
