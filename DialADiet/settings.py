@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '93&@jhos#wtet6r=wx4e4k+qhf3a*1etx^b!m1te-6b&d1b&$o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['dial-a-diet.herokuapp.com/', '127.0.0.1']
 
