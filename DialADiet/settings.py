@@ -138,9 +138,6 @@ if 'DATABASE_URL' in os.environ:
 
     DATABASES = {'default': dj_database_url.config()}
 
-
-
-
 # AllAuth Settings
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
@@ -156,12 +153,21 @@ ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_FORMS = {
     'signup': 'users.forms.CustomSignupForm'
 }
 
-# ToDo: Add the SMTP details
+
+# Mailing Settings:
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'drmanishabandishti@gmail.com'
+EMAIL_HOST_PASSWORD = 'Somen1234'
+EMAIL_USE_TLS = True
+
 # ToDo: Add the social auth provider details
 # ToDo: Get Environment Variables
