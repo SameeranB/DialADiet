@@ -1,10 +1,18 @@
 from allauth.account.forms import SignupForm
+from captcha.widgets import ReCaptchaV2Checkbox
 from django import forms
 from phonenumber_field.formfields import PhoneNumberField
 from phonenumber_field.widgets import PhoneNumberPrefixWidget
+from captcha.fields import ReCaptchaField
 
 
 class CustomSignupForm(SignupForm):
+    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox(
+        attrs={
+            'data-theme': 'dark',
+            'data-size': 'normal'
+        }
+    ))
     email = forms.EmailField(label='', widget=forms.TextInput(attrs={'placeholder': "Email"}))
     first_name = forms.CharField(max_length=30, label='', widget=forms.TextInput(attrs={'placeholder': "First Name"}))
     last_name = forms.CharField(max_length=30, label='', widget=forms.TextInput(attrs={'placeholder': "Last Name"}))
