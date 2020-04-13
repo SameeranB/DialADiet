@@ -52,8 +52,13 @@ INSTALLED_APPS = [
 
     # PhoneNumberField
     'phonenumber_field',
+
+    # Recaptcha
+    'captcha',
+
     # Apps:
     'users'
+
 
 ]
 
@@ -153,11 +158,9 @@ ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 
-
 ACCOUNT_FORMS = {
     'signup': 'users.forms.CustomSignupForm'
 }
-
 
 # Mailing Settings:
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -168,6 +171,10 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'drmanishabandishti@gmail.com'
 EMAIL_HOST_PASSWORD = 'Somen1234'
 EMAIL_USE_TLS = True
+
+# Recaptcha
+RECAPTCHA_PUBLIC_KEY = "6Ld82-gUAAAAADA0eOqKKJInfZGg1bsZkoq1lkPE"
+RECAPTCHA_PRIVATE_KEY = "6Ld82-gUAAAAAGfrw0A6-V8Lyscn7nOVIUPMCLnI"
 
 # ToDo: Add the social auth provider details
 # ToDo: Get Environment Variables
