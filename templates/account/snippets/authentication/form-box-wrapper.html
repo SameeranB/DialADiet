@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load static %}
+
+<div class="form-box-wrapper">
+    <div class="hero-wrapper">
+        <pre class="hero-heading">
+We Help You Maintain Your <span class="hero-heading-health">Health.</span>
+<span class="hero-heading-online">Online.</span></pre>
+        <div class="hero-image-wrapper">
+            <img src="{% static 'account/Assets/LogoWhite.svg' %}" alt="" class="hero-image">
+        </div>
+    </div>
+
+    <div class="login-form-wrapper">
+        <div class="login-form-header">
+            Dial-A-Diet
+        </div>
+        <form class="login-form {% if action == "login" %} login-form {% else %} signup-form {% endif %}" method="POST"
+              action="{% if action == "login" %}{% url 'account_login' %}{% else %}{% url 'account_signup' %}{% endif %}">
+            {% csrf_token %}
+            {{ form }}
+            {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+            {% endif %}
+
+        {% if action == 'login' %}
+            <div class="forgot-password-wrapper">
+                <a class="forgot-password"
+                   href="{% url 'account_reset_password' %}">{% trans "Forgot password?" %}</a>
+            </div>
+        {% endif %}
+            <div class="{% if action == "login" %}login-form-submit-wrapper {% else %} signup-form-submit-wrapper {% endif %}">
+                <button class="{% if action == "login" %}login-form-submit-button {% else %} signup-form-submit-button {% endif %}"
+                        type="submit">{% if action == "login" %} {% trans "Log In" %} {% else %}
+                    {% trans "Sign Up" %} {% endif %}</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>

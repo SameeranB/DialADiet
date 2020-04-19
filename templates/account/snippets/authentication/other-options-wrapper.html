@@ -1,0 +1,29 @@
+{% load i18n %}
+{% load static %}
+
+<div class="other-options-wrapper">
+    <span class="sign-up-heading"><hr class="new-here-line line-one">{% if action == "login" %}New Here?{% else %}Already With Us?{% endif %}<hr class="new-here-line line-two"></span>
+    <div class="sign-up-wrapper">
+
+        <div class="sign-up-button-wrapper">
+            <a class="sign-up-button" href="{% if action == "login" %}{{ signup_url }}{% else %}{{ login_url }}{% endif %}">
+                {% if action == "login" %}
+                Sign Up
+                {% else %}
+                Log In
+                {% endif %}
+            </a>
+        </div>
+    </div>
+    <a class="contact-us-wrapper" href="mailto:info@drmanishabandishti.com">
+        <div class="contact-us-text">
+            Need Help?<br>
+            <span class="contact-us-call-to-action">Get In Touch</span>
+        </div>
+        <hr class="contact-us-divider">
+        <div class="contact-us-image-wrapper">
+            <img src="{% static 'account/Assets/EmailIcon.svg' %}" alt="" class="contact-us-image">
+        </div>
+    </a>
+
+</div>

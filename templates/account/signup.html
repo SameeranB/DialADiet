@@ -1,0 +1,23 @@
+{% extends 'account/bases/landing-base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %} Sign Up {% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'account/CSS/signup.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    {# Navbar #}
+    {% include 'account/snippets/landingNavbar.html' with logoColor="black" %}
+
+     {# Main Content #}
+    <div class="content">
+        {% include 'account/snippets/authentication/form-box-wrapper.html' with action='signup' %}
+    </div>
+
+    {% include 'account/snippets/authentication/other-options-wrapper.html' with action='signup' %}
+
+{% endblock %}

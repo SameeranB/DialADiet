@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '93&@jhos#wtet6r=wx4e4k+qhf3a*1etx^b!m1te-6b&d1b&$o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['dial-a-diet.herokuapp.com', '127.0.0.1']
 
@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     # Apps:
     'users'
 
-
 ]
 
 MIDDLEWARE = [
@@ -79,7 +78,7 @@ AUTH_USER_MODEL = 'users.User'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'DialADiet/frontend/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,6 +134,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = 'staticfiles'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
 # Heroku Settings
 django_heroku.settings(locals())
 
@@ -157,9 +160,11 @@ ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_SESSION_REMEMBER = True
 
 ACCOUNT_FORMS = {
-    'signup': 'users.forms.CustomSignupForm'
+    'signup': 'users.forms.CustomSignupForm',
+    'login': 'users.forms.CustomLoginForm'
 }
 
 # Mailing Settings:

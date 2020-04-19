@@ -1,0 +1,21 @@
+{% load static %}
+
+
+<div class="navbar-wrapper">
+    <div class="navbar-logo">
+        <a href="{% url 'home' %}">
+            {% if logoColor == "white" %}
+                <img src="{% static 'account/Assets/LogoWhite.svg' %}" class="logo">
+            {% else %}
+                <img src="{% static 'account/Assets/LogoBlack.svg' %}" class="logo">
+            {% endif %}
+        </a>
+    </div>
+
+    <div class="nav-link-wrapper">
+        <a href="#" class="nav-link">The Program</a>
+        <a href="#" class="nav-link">Pricing</a>
+        <a href="#" class="nav-link">The Process</a>
+        <a href="{{ login_url }}" class="nav-link">Sign In</a>
+    </div>
+</div>

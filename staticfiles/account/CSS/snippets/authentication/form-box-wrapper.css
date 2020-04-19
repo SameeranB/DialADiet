@@ -1,0 +1,290 @@
+.form-box-wrapper {
+  width: 90%;
+  transform: translate(0, 15px);
+  transition: transform 15ms ease-in;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+@media (min-width: 438px) {
+  .form-box-wrapper {
+    width: 80%;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    justify-items: center;
+    border-radius: 26px;
+  }
+}
+.form-box-wrapper .hero-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1.5fr;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 437px) {
+  .form-box-wrapper .hero-wrapper {
+    display: none;
+  }
+}
+.form-box-wrapper .hero-wrapper .hero-heading {
+  align-self: center;
+  justify-self: start;
+  height: min-content;
+  font-family: "Poppins", sans-serif;
+  font-size: 8rem;
+  font-weight: 600;
+  color: #f2f2f2;
+}
+@media (min-width: 438px) and (max-width: 768px) {
+  .form-box-wrapper .hero-wrapper .hero-heading {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 438px) and (max-width: 641px) {
+  .form-box-wrapper .hero-wrapper .hero-heading {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1439px) {
+  .form-box-wrapper .hero-wrapper .hero-heading {
+    font-size: 6rem;
+  }
+}
+@media (min-width: 1440px) {
+  .form-box-wrapper .hero-wrapper .hero-heading {
+    font-size: 8.5rem;
+  }
+}
+.form-box-wrapper .hero-wrapper .hero-heading .hero-heading-health {
+  color: #03DD32;
+}
+.form-box-wrapper .hero-wrapper .hero-heading .hero-heading-online {
+  color: #FF6301;
+}
+.form-box-wrapper .hero-wrapper .hero-image-wrapper {
+  align-self: start;
+  justify-self: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.form-box-wrapper .hero-wrapper .hero-image-wrapper .hero-image {
+  width: 70%;
+}
+.form-box-wrapper .login-form-wrapper {
+  background-color: #f2f2f2;
+  width: 100%;
+  border: none;
+  border-radius: 26px;
+  height: fit-content;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+@media (min-width: 438px) {
+  .form-box-wrapper .login-form-wrapper {
+    background: linear-gradient(#2D4E72, #91AFC3);
+    padding: 3%;
+    max-width: 550px;
+  }
+}
+.form-box-wrapper .login-form-wrapper .login-form-header {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 10rem;
+  text-align: center;
+  font-style: oblique;
+}
+@media (min-width: 438px) {
+  .form-box-wrapper .login-form-wrapper .login-form-header {
+    font-size: 8rem;
+    color: #f2f2f2;
+  }
+}
+@media (min-width: 438px) and (max-width: 641px) {
+  .form-box-wrapper .login-form-wrapper .login-form-header {
+    font-size: 6rem;
+  }
+}
+@media (min-width: 769px) {
+  .form-box-wrapper .login-form-wrapper .login-form-header {
+    font-size: 10rem;
+  }
+}
+@media (min-width: 1440px) {
+  .form-box-wrapper .login-form-wrapper .login-form-header {
+    font-size: 15rem;
+  }
+}
+.form-box-wrapper .login-form-wrapper .login-form {
+  align-self: start;
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1.1fr;
+  align-items: center;
+  justify-items: center;
+}
+.form-box-wrapper .login-form-wrapper .login-form .errorlist {
+  color: #f2f2f2;
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-align: center;
+}
+.form-box-wrapper .login-form-wrapper .login-form .error input, .form-box-wrapper .login-form-wrapper .login-form .error select {
+  border: 2px red solid;
+}
+.form-box-wrapper .login-form-wrapper .login-form .email-input {
+  background: #a1c4f5;
+  width: 95%;
+  height: 20%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5rem;
+  color: black;
+  border: none;
+  border-radius: 22px;
+  padding: 6%;
+}
+.form-box-wrapper .login-form-wrapper .login-form .password-input {
+  background: #a1c4f5;
+  width: 95%;
+  height: 20%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5rem;
+  border: none;
+  border-radius: 22px;
+  padding: 6%;
+}
+.form-box-wrapper .login-form-wrapper .login-form .forgot-password-wrapper {
+  display: grid;
+  width: 95%;
+  justify-items: end;
+}
+.form-box-wrapper .login-form-wrapper .login-form .forgot-password-wrapper .forgot-password {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding-top: 2%;
+}
+@media (min-width: 438px) {
+  .form-box-wrapper .login-form-wrapper .login-form .forgot-password-wrapper .forgot-password {
+    font-size: 3.5rem;
+  }
+}
+.form-box-wrapper .login-form-wrapper .login-form .login-form-submit-wrapper {
+  align-self: end;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.form-box-wrapper .login-form-wrapper .login-form .login-form-submit-wrapper .login-form-submit-button {
+  border: none;
+  border-radius: 22px;
+  align-self: end;
+  width: 95%;
+  background: #6cd457;
+  color: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+  padding: 2% 0;
+}
+.form-box-wrapper .login-form-wrapper .login-form .login-form-submit-wrapper .login-form-submit-button :active {
+  box-shadow: unset;
+}
+.form-box-wrapper .login-form-wrapper .signup-form {
+  align-self: start;
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1.1fr;
+  align-items: center;
+  justify-items: center;
+}
+.form-box-wrapper .login-form-wrapper .signup-form .errorlist {
+  color: #f2f2f2;
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-align: center;
+}
+.form-box-wrapper .login-form-wrapper .signup-form .error input, .form-box-wrapper .login-form-wrapper .signup-form .error select {
+  border: 2px red solid;
+}
+.form-box-wrapper .login-form-wrapper .signup-form .email-input {
+  background: #a1c4f5;
+  width: 95%;
+  height: 20%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5rem;
+  color: black;
+  border: none;
+  border-radius: 22px;
+  padding: 6%;
+}
+.form-box-wrapper .login-form-wrapper .signup-form .password-input {
+  background: #a1c4f5;
+  width: 95%;
+  height: 20%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5rem;
+  border: none;
+  border-radius: 22px;
+  padding: 6%;
+}
+.form-box-wrapper .login-form-wrapper .signup-form .forgot-password-wrapper {
+  display: grid;
+  width: 95%;
+  justify-items: end;
+}
+.form-box-wrapper .login-form-wrapper .signup-form .forgot-password-wrapper .forgot-password {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding-top: 2%;
+}
+@media (min-width: 438px) {
+  .form-box-wrapper .login-form-wrapper .signup-form .forgot-password-wrapper .forgot-password {
+    font-size: 3.5rem;
+  }
+}
+.form-box-wrapper .login-form-wrapper .signup-form .signup-form-submit-wrapper {
+  align-self: end;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.form-box-wrapper .login-form-wrapper .signup-form .signup-form-submit-wrapper .signup-form-submit-button {
+  border: none;
+  border-radius: 22px;
+  align-self: end;
+  width: 95%;
+  background: #6cd457;
+  color: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+  padding: 2% 0;
+}
+.form-box-wrapper .login-form-wrapper .signup-form .signup-form-submit-wrapper .signup-form-submit-button :active {
+  box-shadow: unset;
+}
+
+/*# sourceMappingURL=form-box-wrapper.css.map */
