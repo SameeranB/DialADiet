@@ -33,7 +33,7 @@ else:
     SITE_ID = 2
 
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/dashboard'
 
 # Application definition
 
