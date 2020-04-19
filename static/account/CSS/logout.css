@@ -1,163 +1,17 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @import "bases/message_base";
+ *   |         ^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   logout.scss 1:9  root stylesheet */
 
-body {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-gap: 10%;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"bases/message_base\";\a   \2502          ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   logout.scss 1:9  root stylesheet";
 }
-body * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body .navbar-wrapper {
-  background: #f2f2f2;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 3.5fr 1.5fr;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
-}
-body .navbar-wrapper .navbar-logo {
-  width: fit-content;
-  padding: 20px;
-  align-self: center;
-}
-body .navbar-wrapper .navbar-logo .logo {
-  width: 100%;
-  max-width: 60vw;
-}
-@media (min-width: 438px) and (max-width: 768px) {
-  body .navbar-wrapper .navbar-logo .logo {
-    width: 50%;
-  }
-}
-@media (min-width: 769px) and (max-width: 1440px) {
-  body .navbar-wrapper .navbar-logo .logo {
-    width: 50%;
-  }
-}
-@media (min-width: 1441px) {
-  body .navbar-wrapper .navbar-logo .logo {
-    width: 70%;
-  }
-}
-body .navbar-wrapper .nav-link-wrapper {
-  display: none;
-}
-body .navbar-wrapper .nav-link-wrapper .nav-link {
-  font-family: "Poppins", sans-serif;
-}
-body .content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body .content .container {
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  background-color: #f2f2f2;
-  display: grid;
-  grid-template-rows: 0.8fr 0.3fr 3fr;
-  align-items: center;
-  justify-items: center;
-  height: fit-content;
-  width: 50%;
-  border-radius: 26px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-}
-@media (max-width: 768px) {
-  body .content .container {
-    width: 95%;
-  }
-}
-body .content .container .container-title {
-  font-weight: 500;
-  font-size: 4rem;
-}
-@media (max-width: 768px) {
-  body .content .container .container-title {
-    font-size: 3rem;
-  }
-}
-body .content .container .container-hr {
-  width: 60%;
-  border-color: #FF6301;
-}
-body .content .container .container-body {
-  font-size: 1.5rem;
-  align-self: start;
-  width: 85%;
-}
-@media (max-width: 768px) {
-  body .content .container .container-body {
-    font-size: 1.2rem;
-  }
-}
-body .content .container .container-body form label {
-  display: none;
-}
-body .content .container .container-body form input:not([type=submit]) {
-  background: #a1c4f5;
-  width: 55%;
-  height: 20%;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
-  color: black;
-  border: none;
-  border-radius: 22px;
-  padding: 3%;
-}
-@media (max-width: 437px) {
-  body .content .container .container-body form input:not([type=submit]) {
-    width: 80%;
-    height: 60%;
-  }
-}
-body .content .container .container-body form input[type=submit] {
-  background-color: #03DD32;
-  border: none;
-  border-radius: 15px;
-  padding: 3%;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #f2f2f2;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-}
-@media (max-width: 437px) {
-  body .content .container .container-body form input[type=submit] {
-    width: 80%;
-  }
-}
-
-.options {
-  margin-top: 15%;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10%;
-}
-.options .button {
-  border: none;
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  font-size: 2rem;
-  color: #f2f2f2;
-  text-decoration: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-}
-.options .logout {
-  background-color: #FF6301;
-}
-.options .go-back {
-  background-color: #03DD32;
-}
-
-/*# sourceMappingURL=logout.css.map */
