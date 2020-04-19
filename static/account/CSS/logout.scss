@@ -1,4 +1,4 @@
-@import "bases/messages_base";
+@import "bases/information_template";
 
 .options{
   margin-top: 15%;
@@ -20,11 +20,11 @@
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
   }
 
-  .logout{
+  .logout-option{
     background-color: #FF6301;
   }
 
-  .go-back{
+  .go-back-option{
     background-color: #03DD32;
   }
 }

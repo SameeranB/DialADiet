@@ -12,6 +12,7 @@
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  padding: 0 2%;
 }
 .navbar-wrapper .navbar-logo {
   width: fit-content;
@@ -38,10 +39,23 @@
   }
 }
 .navbar-wrapper .nav-link-wrapper {
-  display: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
 }
 .navbar-wrapper .nav-link-wrapper .nav-link {
+  text-decoration: none;
+  display: none;
   font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+}
+.navbar-wrapper .nav-link-wrapper .register {
+  background-color: #03DD32;
+  padding: 10%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
 * {

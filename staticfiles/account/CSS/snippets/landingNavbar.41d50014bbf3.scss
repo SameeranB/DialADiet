@@ -1,0 +1,71 @@
+@import "../../../Helpers/include-media";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.navbar-wrapper {
+  background: #f2f2f2;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 3.5fr 1.5fr;
+
+  //height: fit-content;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+
+  padding: 0 2%;
+
+
+
+  .navbar-logo {
+    width: fit-content;
+    padding: 20px;
+    align-self: center;
+
+    .logo {
+      width: 100%;
+      max-width: 60vw;
+
+      @include media('>phone', '<=tablet') {
+        width: 50%;
+      }
+      @include media('>tablet', '<=laptop') {
+        width: 50%;
+      }
+      @include media('>laptop') {
+        width: 70%;
+      }
+
+    }
+  }
+
+  .nav-link-wrapper {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    align-items: center;
+    justify-items: center;
+
+    .nav-link {
+      text-decoration: none;
+
+      font-family: 'Poppins', sans-serif;
+      font-size: 4rem;
+      font-weight: 600;
+      color: black;
+    }
+
+    .register {
+      background-color: #03DD32;
+      padding: 10%;
+      box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
+  }
+}

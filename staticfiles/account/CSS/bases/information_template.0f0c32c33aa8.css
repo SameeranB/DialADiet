@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-gap: 10%;
+}
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body .navbar-wrapper {
+  background: #f2f2f2;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 3.5fr 1.5fr;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  padding: 0 2%;
+}
+body .navbar-wrapper .navbar-logo {
+  width: fit-content;
+  padding: 20px;
+  align-self: center;
+}
+body .navbar-wrapper .navbar-logo .logo {
+  width: 100%;
+  max-width: 60vw;
+}
+@media (min-width: 438px) and (max-width: 768px) {
+  body .navbar-wrapper .navbar-logo .logo {
+    width: 50%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1440px) {
+  body .navbar-wrapper .navbar-logo .logo {
+    width: 50%;
+  }
+}
+@media (min-width: 1441px) {
+  body .navbar-wrapper .navbar-logo .logo {
+    width: 70%;
+  }
+}
+body .navbar-wrapper .nav-link-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+body .navbar-wrapper .nav-link-wrapper .nav-link {
+  text-decoration: none;
+  display: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+}
+body .navbar-wrapper .nav-link-wrapper .register {
+  background-color: #03DD32;
+  padding: 10%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+body .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .content .container {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-rows: 0.8fr 0.3fr 3fr;
+  align-items: center;
+  justify-items: center;
+  height: fit-content;
+  width: 50%;
+  border-radius: 26px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  body .content .container {
+    width: 95%;
+  }
+}
+body .content .container .container-title {
+  font-weight: 500;
+  font-size: 4rem;
+}
+@media (min-width: 438px) and (max-width: 768px) {
+  body .content .container .container-title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 437px) {
+  body .content .container .container-title {
+    font-size: 1.2rem;
+  }
+}
+body .content .container .container-hr {
+  width: 60%;
+  border-color: #FF6301;
+}
+body .content .container .container-body {
+  font-size: 1.5rem;
+  align-self: start;
+  width: 85%;
+}
+@media (max-width: 768px) {
+  body .content .container .container-body {
+    font-size: 1.2rem;
+  }
+}
+body .content .container .container-body form {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+body .content .container .container-body form label {
+  display: none;
+}
+body .content .container .container-body form input:not([type=submit]) {
+  background: #a1c4f5;
+  width: 55%;
+  height: 20%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  border: none;
+  border-radius: 22px;
+  padding: 3%;
+}
+@media (max-width: 437px) {
+  body .content .container .container-body form input:not([type=submit]) {
+    width: 80%;
+    height: 60%;
+  }
+}
+body .content .container .container-body form input[type=submit], body .content .container .container-body form button[type=submit] {
+  background-color: #03DD32;
+  border: none;
+  border-radius: 15px;
+  padding: 3%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f2f2f2;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 437px) {
+  body .content .container .container-body form input[type=submit], body .content .container .container-body form button[type=submit] {
+    width: 80%;
+  }
+}
+body .content .container .container-body form .errorlist {
+  color: firebrick;
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-align: center;
+}
+body .content .container .container-body form .error input, body .content .container .container-body form .error select {
+  border: 2px red solid;
+}
+
+/*# sourceMappingURL=information_template.css.map */

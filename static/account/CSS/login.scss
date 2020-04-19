@@ -1,3 +1,6 @@
+$action: "login";
+
+
 @import "snippets/landingNavbar";
 @import "../../Helpers/include-media";
 
@@ -7,7 +10,6 @@
   padding: 0;
 }
 
-$action: "login";
 
 html {
   min-height: 100%;
@@ -15,15 +17,15 @@ html {
   @include media('<=phone') {
     font-size: 30%;
   }
-  @include media('>phone', '<tablet'){
+  @include media('>phone', '<tablet') {
     font-size: 22%;
   }
 
-  @include media('>=tablet', '<laptop'){
+  @include media('>=tablet', '<laptop') {
     font-size: 22.6%;
   }
 
-  @include media('>=laptop'){
+  @include media('>=laptop') {
     font-size: 27%;
   }
 }
@@ -40,7 +42,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    @include media('>=tablet'){
+    @include media('>=tablet') {
       height: unset;
     }
 

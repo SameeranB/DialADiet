@@ -1,3 +1,6 @@
+$action: "signup";
+
+
 @import "snippets/landingNavbar";
 @import "../../Helpers/include-media";
 
@@ -7,7 +10,6 @@
   padding: 0;
 }
 
-$action: "signup";
 
 html {
   min-height: 100%;

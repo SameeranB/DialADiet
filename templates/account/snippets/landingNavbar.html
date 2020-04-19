@@ -3,7 +3,7 @@
 
 <div class="navbar-wrapper">
     <div class="navbar-logo">
-        <a href="{% url 'home' %}">
+        <a href="{% url 'users:home' %}">
             {% if logoColor == "white" %}
                 <img src="{% static 'account/Assets/LogoWhite.svg' %}" class="logo">
             {% else %}
@@ -15,7 +15,13 @@
     <div class="nav-link-wrapper">
         <a href="#" class="nav-link">The Program</a>
         <a href="#" class="nav-link">Pricing</a>
-        <a href="#" class="nav-link">The Process</a>
-        <a href="{{ login_url }}" class="nav-link">Sign In</a>
+        {#        <a href="#" class="nav-link">The Process</a>#}
+        {% if user.is_authenticated %}
+            <a href="{% url 'account_logout' %}" class="nav-link logout">Log Out</a>
+
+        {% else %}
+            <a href="{% url 'account_login' %}" class="nav-link">Sign In</a>
+            <a href="{% url 'account_signup' %}" class="nav-link register">Register</a>
+        {% endif %}
     </div>
 </div>

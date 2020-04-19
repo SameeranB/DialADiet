@@ -18,8 +18,8 @@ from django.http import HttpResponse
 from django.urls import path, include
 
 urlpatterns = [
-    path('', lambda req:HttpResponse("Home"), name="home"),
-    path('dashboard/', lambda req:HttpResponse("Dashboard"), name="dashboard"),
+    path('', include('users.urls')),
+    path('dashboard/', lambda req: HttpResponse("Dashboard"), name="dashboard"),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls'))
 ]
