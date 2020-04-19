@@ -71,6 +71,7 @@ body {
 
           align-items: center;
           justify-items: center;
+
           label {
             display: none;
           }
@@ -99,6 +100,7 @@ body {
             padding: 3%;
 
           }
+
           input[type="submit"] {
 
             background-color: #03DD32;
@@ -119,6 +121,18 @@ body {
             color: #f2f2f2;
 
             box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+          }
+
+          .errorlist {
+            color: firebrick;
+            font-size: 4rem;
+            font-family: "Poppins", sans-serif;
+            list-style: none;
+            text-align: center;
+          }
+
+          .error input, .error select {
+            border: 2px red solid;
           }
         }
       }

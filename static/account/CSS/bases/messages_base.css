@@ -141,5 +141,15 @@ body .content .container .container-body form input[type=submit] {
     width: 80%;
   }
 }
+body .content .container .container-body form .errorlist {
+  color: firebrick;
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-align: center;
+}
+body .content .container .container-body form .error input, body .content .container .container-body form .error select {
+  border: 2px red solid;
+}
 
 /*# sourceMappingURL=messages_base.css.map */
