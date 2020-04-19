@@ -1,0 +1,17 @@
+.navbar-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+  min-height: 10%;
+
+  .navbar-logo {
+    max-height: 100px;
+  }
+
+  .nav-link-wrapper {
+    .nav-link {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}

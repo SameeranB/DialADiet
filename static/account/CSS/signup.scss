@@ -1,0 +1,54 @@
+@import "snippets/landingNavbar";
+@import "../../Helpers/include-media";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$action: "signup";
+
+html {
+  min-height: 100%;
+
+  @include media('<=phone') {
+    font-size: 30%;
+  }
+  @include media('>phone', '<tablet') {
+    font-size: 22%;
+  }
+
+  @include media('>=tablet', '<laptop') {
+    font-size: 22.6%;
+  }
+
+  @include media('>=laptop') {
+    font-size: 27%;
+  }
+}
+
+
+body {
+  background: linear-gradient(#022954, #94B3C6) no-repeat;
+  height: fit-content;
+
+  .content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media('>=tablet') {
+      height: unset;
+    }
+
+    @import "snippets/authentication/form-box-wrapper";
+
+  }
+
+  @import "snippets/authentication/other-options-wrapper";
+
+}
+

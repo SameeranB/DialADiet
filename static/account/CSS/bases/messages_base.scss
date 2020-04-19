@@ -1,0 +1,128 @@
+@import "../../../Helpers/include-media";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-gap: 10%;
+
+  @import "../snippets/landingNavbar";
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+
+      background-color: #f2f2f2;
+
+      display: grid;
+      grid-template-rows: 0.8fr 0.3fr 3fr;
+      align-items: center;
+      justify-items: center;
+
+      height: fit-content;
+      width: 50%;
+
+      @include media('<=tablet') {
+        width: 95%;
+      }
+
+
+      border-radius: 26px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+
+      .container-title {
+        font-weight: 500;
+        font-size: 4rem;
+
+        @include media('<=tablet') {
+          font-size: 3rem;
+        }
+      }
+
+      .container-hr {
+        width: 60%;
+        border-color: #FF6301;
+      }
+
+      .container-body {
+        font-size: 1.5rem;
+        align-self: start;
+
+        width: 85%;
+
+        @include media('<=tablet') {
+          font-size: 1.2rem;
+        }
+
+        form {
+          display: grid;
+          grid-template-columns: 1fr;
+
+          align-items: center;
+          justify-items: center;
+          label {
+            display: none;
+          }
+
+          input:not([type="submit"]) {
+            background: #a1c4f5;
+            width: 55%;
+            height: 20%;
+
+
+            @include media('<=phone') {
+              width: 80%;
+              height: 60%;
+            }
+
+            text-align: center;
+
+            font-family: "Poppins", sans-serif;
+            font-size: 1.5rem;
+
+            color: black;
+
+            border: none;
+            border-radius: 22px;
+
+            padding: 3%;
+
+          }
+          input[type="submit"] {
+
+            background-color: #03DD32;
+
+            @include media('<=phone') {
+              width: 80%;
+
+            }
+
+
+            border: none;
+            border-radius: 15px;
+            padding: 3%;
+
+            font-size: 1.2rem;
+            font-weight: 600;
+
+            color: #f2f2f2;
+
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+          }
+        }
+      }
+    }
+  }
+}
+

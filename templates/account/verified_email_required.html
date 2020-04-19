@@ -1,0 +1,28 @@
+{% extends "account/bases/message_base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'account/CSS/bases/messages_base.css' %}">
+{% endblock %}
+
+{% block container-title %}
+    {% trans "Verify Your E-mail Address" %}
+{% endblock %}
+{% block container-body %}
+    {% url 'account_email' as email_url %}
+
+    {% blocktrans %}This part of the site requires us to verify that
+        you are who you claim to be. For this purpose, we require that you
+        verify ownership of your e-mail address. {% endblocktrans %}
+
+    {% blocktrans %}We have sent an e-mail to you for
+        verification. Please click on the link inside this e-mail. Please
+        contact us if you do not receive it within a few minutes.{% endblocktrans %}
+
+    {% blocktrans %}<strong>Note:</strong> you can still <a href="{{ email_url }}">change your e-mail address</a>
+        .{% endblocktrans %}
+
+{% endblock %}

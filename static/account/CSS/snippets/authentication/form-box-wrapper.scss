@@ -1,0 +1,380 @@
+@import "../../../../Helpers/include-media";
+
+
+.form-box-wrapper {
+  width: 90%;
+  transform: translate(0, 15px);
+  transition: transform 15ms ease-in;
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+
+  @if $action == "login" {
+    @include media('>phone') {
+      width: 80%;
+
+      grid-template-columns: 3fr 2fr;
+
+
+      border-radius: 26px;
+
+    }
+  }
+
+  @if $action == 'signup' {
+    @include media('>=laptop') {
+      width: 80%;
+
+      grid-template-columns: 3fr 2fr;
+
+
+      border-radius: 26px;
+
+    }
+  }
+
+
+  .hero-wrapper {
+    display: grid;
+    @include media('<=phone') {
+      display: none;;
+    }
+
+    @if $action == "signup" {
+      @include media('<laptop') {
+        display: none;
+      }
+    }
+
+    grid-template-rows: 1fr 1.5fr;
+    width: 100%;
+    height: 100%;
+
+    .hero-heading {
+
+
+      align-self: center;
+      justify-self: start;
+
+      height: min-content;
+
+      font-family: "Poppins", sans-serif;
+      font-size: 8rem;
+
+      @include media('>phone', '<=tablet') {
+        font-size: 5rem;
+      }
+
+      @include media('>phone', '<642px') {
+        font-size: 3.5rem;
+      }
+
+      @include media('>tablet', '<laptop') {
+        font-size: 6rem;
+      }
+      @include media('>=laptop') {
+        font-size: 8.5rem;
+      }
+
+      font-weight: 600;
+      color: #f2f2f2;
+
+      .hero-heading-health {
+        color: #03DD32;
+      }
+
+      .hero-heading-online {
+        color: #FF6301;
+      }
+    }
+
+    .hero-image-wrapper {
+      align-self: start;
+      justify-self: center;
+
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .hero-image {
+        width: 70%;
+      }
+
+    }
+  }
+
+  .login-form-wrapper {
+    background-color: #f2f2f2;
+    width: 100%;
+    border: none;
+    border-radius: 26px;
+
+    //height: fit-content;
+    @include media('>phone') {
+      background: linear-gradient(#2D4E72, #91AFC3);
+      padding: 3%;
+
+      max-width: 550px;
+
+    }
+
+
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+
+    @if $action == 'login' {
+      @include media('>=laptop') {
+        grid-template-rows: 1fr 5fr;
+      }
+    }
+
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+
+    .login-form-header {
+      font-family: "Dancing Script", sans-serif;
+      font-size: 10rem;
+
+      @include media('>phone') {
+        font-size: 8rem;
+        color: #f2f2f2;
+      }
+
+      @include media('>phone', '<642px') {
+        font-size: 6rem;
+      }
+
+      @include media('>tablet') {
+        font-size: 10rem;
+      }
+      @include media('>=laptop') {
+        font-size: 15rem;
+      }
+
+
+      text-align: center;
+      font-style: oblique;
+
+
+    }
+
+    .login-form {
+      align-self: start;
+
+      width: 100%;
+      height: 90%;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 0.5fr 1.1fr;
+
+
+      align-items: center;
+      justify-items: center;
+
+      .errorlist {
+        color: #f2f2f2;
+        font-size: 4rem;
+        font-family: "Poppins", sans-serif;
+        list-style: none;
+        text-align: center;
+      }
+
+      .error input, .error select {
+        border: 2px red solid;
+      }
+
+      .input {
+        background: #a1c4f5;
+        width: 95%;
+        height: 20%;
+        text-align: center;
+
+        font-family: "Poppins", sans-serif;
+        font-size: 4.5rem;
+
+        color: black;
+
+        border: none;
+        border-radius: 22px;
+
+        padding: 6%;
+      }
+
+      .forgot-password-wrapper {
+        display: grid;
+        width: 95%;
+        justify-items: end;
+
+        .forgot-password {
+          font-family: "Poppins", sans-serif;
+          font-size: 4rem;
+          @include media('>phone') {
+            font-size: 3.5rem;
+          }
+          @include media('>tablet'){
+            font-size: 4.5rem;
+          }
+
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+          padding-top: 2%;
+        }
+      }
+
+      .login-form-submit-wrapper {
+        align-self: end;
+
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+
+        .login-form-submit-button {
+          border: none;
+          border-radius: 22px;
+
+          align-self: end;
+
+          width: 95%;
+
+          background: #6cd457;
+          color: #f2f2f2;
+
+          font-family: "Poppins", sans-serif;
+          font-size: 4.5rem;
+          font-weight: 600;
+
+          box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+
+          padding: 2% 0;
+
+          :active {
+            box-shadow: unset;
+          }
+        }
+      }
+    }
+
+    .signup-form {
+      align-self: start;
+
+      width: 100%;
+      height: 90%;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.1fr;
+
+
+      align-items: center;
+      justify-items: center;
+
+      .errorlist {
+        color: #f2f2f2;
+        font-size: 4rem;
+        font-family: "Poppins", sans-serif;
+        list-style: none;
+        text-align: center;
+      }
+
+      .error input, .error select {
+        border: 2px red solid;
+      }
+
+      .input {
+        background: #a1c4f5;
+        width: 95%;
+        height: 50%;
+        text-align: center;
+
+        font-family: "Poppins", sans-serif;
+        font-size: 4.5rem;
+
+        @include media('<laptop') {
+          font-size: 3rem;
+        }
+
+        color: black;
+
+        border: none;
+        border-radius: 22px;
+
+        padding: 6%;
+      }
+
+      .g-recaptcha {
+        align-self: center;
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        //width: 95%;
+
+        @include media('<laptop') {
+          border: none;
+          margin: 0;
+          padding: 0;
+          transform: scale(0.75);
+        }
+
+      }
+
+      #id_email {
+        width: 80%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      #id_phone_0 {
+        padding: 0;
+        text-align-last: center;
+      }
+
+
+      .signup-form-submit-wrapper {
+        align-self: end;
+
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        .signup-form-submit-button {
+          border: none;
+          border-radius: 22px;
+
+          align-self: end;
+
+          width: 95%;
+
+          background: #6cd457;
+          color: #f2f2f2;
+
+          font-family: "Poppins", sans-serif;
+          font-size: 4.5rem;
+          font-weight: 600;
+
+          box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+
+          padding: 2% 0;
+
+          :active {
+            box-shadow: unset;
+          }
+        }
+      }
+    }
+
+  }
+
+
+}
