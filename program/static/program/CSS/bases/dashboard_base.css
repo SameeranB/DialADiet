@@ -1,0 +1,59 @@
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 6fr;
+  background: #A1C4F5;
+}
+.navbar-wrapper .navbar-logo-wrapper {
+  background: #BAD3F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6%;
+}
+.navbar-wrapper .hamburger-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 3%;
+}
+.navbar-wrapper .profile-wrapper {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  align-self: center;
+  justify-self: end;
+  margin-right: 5%;
+}
+.navbar-wrapper .profile-wrapper :hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  border-radius: 26px;
+}
+.navbar-wrapper .profile-wrapper .profile-text {
+  display: flex;
+  padding: 6% 8%;
+}
+.navbar-wrapper .profile-wrapper .profile-text :hover {
+  box-shadow: none;
+}
+.navbar-wrapper .profile-wrapper .profile-text .dropdown-icon {
+  padding: 0 10%;
+}
+.profile-dropdown-wrapper {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/*# sourceMappingURL=dashboard_base.css.map */

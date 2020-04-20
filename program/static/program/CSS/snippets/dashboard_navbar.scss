@@ -1,0 +1,121 @@
+.navbar-wrapper {
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 6fr;
+
+  background: #A1C4F5;
+
+  .navbar-logo-wrapper {
+    background: #BAD3F5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6%;
+
+    .navbar-logo {
+
+    }
+  }
+
+  .hamburger-wrapper {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0 3%;
+
+    .hamburger {
+
+    }
+  }
+
+
+  .profile-wrapper {
+
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+
+    align-self: center;
+    justify-self: end;
+
+    margin-right: 5%;
+
+
+    :hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      border-radius: 26px;
+
+    }
+
+
+    .profile-text {
+      display: flex;
+
+      padding: 6% 8%;
+
+      :hover {
+        box-shadow: none;
+      }
+
+      .dropdown-icon {
+        padding: 0 10%;
+
+      }
+    }
+
+    .dropdown-icon-wrapper {
+
+
+    }
+  }
+}
+
+
+.profile-dropdown-wrapper {
+
+  display: none;
+
+  .profile-dropdown {
+
+  }
+
+  .logout-wrapper {
+
+    .logout-icon-wrapper {
+
+      .logout-icon {
+
+      }
+    }
+
+    .logout-text {
+
+    }
+  }
+
+  .dropdown-divider {
+
+  }
+
+  .settings-wrapper {
+    .settings-icon-wrapper {
+
+      .settings-icon {
+
+      }
+    }
+
+    .settings-text {
+
+    }
+  }
+}

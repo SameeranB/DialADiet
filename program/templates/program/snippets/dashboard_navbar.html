@@ -1,0 +1,40 @@
+{% load static %}
+
+<div class="navbar-wrapper">
+    <div class="navbar-logo-wrapper">
+        <img src="{% static 'program/assets/dashboard_navbar_logo.svg' %}" alt="" class="navbar-logo">
+    </div>
+    <div class="hamburger-wrapper">
+        <img src="{% static 'program/assets/dashboard_navbar_hamburger.svg' %}" alt="" class="hamburger">
+    </div>
+    <div class="profile-wrapper">
+        <div class="profile-text">
+            Profile
+            <img src="{% static 'program/assets/down-arrow.svg' %}" alt="" class="dropdown-icon">
+        </div>
+
+    </div>
+</div>
+
+<div class="profile-dropdown-wrapper">
+    <ul class="profile-dropdown">
+        <li class="logout-wrapper">
+            <div class="logout-icon-wrapper">
+                <img src="" alt="" class="logout-icon">
+            </div>
+            <span class="logout-text">
+                Logout
+            </span>
+        </li>
+        <hr class="dropdown-divider"/>
+        <li class="settings-wrapper">
+            <div class="settings-icon-wrapper">
+                <img src="" alt="" class="settings-icon">
+            </div>
+            <span class="settings-text">
+                Settings
+            </span>
+        </li>
+    </ul>
+</div>
+
