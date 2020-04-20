@@ -12,6 +12,7 @@
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  padding: 0 2%;
 }
 .navbar-wrapper .navbar-logo {
   width: fit-content;
@@ -38,10 +39,29 @@
   }
 }
 .navbar-wrapper .nav-link-wrapper {
-  display: none;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: auto auto auto auto;
 }
 .navbar-wrapper .nav-link-wrapper .nav-link {
+  text-decoration: none;
   font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
 }
-
-/*# sourceMappingURL=landingNavbar.css.map */
+.navbar-wrapper .nav-link-wrapper .register {
+  background-color: #03DD32;
+  padding: 5%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  border-radius: 26px;
+}
+.navbar-wrapper .nav-link-wrapper .logout {
+  background-color: #FF6301;
+  padding: 5%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  grid-column-start: 3;
+  grid-column-end: 5;
+  border-radius: 26px;
+}

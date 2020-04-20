@@ -12,7 +12,7 @@
   background: #f2f2f2;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 3.5fr 1.5fr;
+  grid-template-columns: 3fr 2fr;
 
   //height: fit-content;
   border-bottom-right-radius: 20px;
@@ -45,7 +45,10 @@
   }
 
   .nav-link-wrapper {
-    display: grid;
+    display: none;
+    @include media('>tablet') {
+      display: grid;
+    }
 
     align-items: center;
     justify-items: center;
@@ -58,10 +61,26 @@
       font-family: 'Poppins', sans-serif;
       font-size: 1.5rem;
 
-      @if variable_exists(action){
+      @include media('<desktop') {
+        font-size: 1rem;
+      }
 
-        @if $action == 'login' or $action == 'signup'{
-          font-size: 5.5rem;
+
+      @if variable_exists(action) {
+
+        @if $action == 'login' or $action == 'signup' {
+
+          @include media('>=laptop') {
+            font-size: 5.2rem;
+          }
+
+          @include media('>tablet', '<laptop'){
+            font-size: 4rem;
+          }
+
+          @include media('<=tablet') {
+            font-size: 1.5rem;
+          }
         }
       }
       font-weight: 600;
@@ -85,6 +104,60 @@
 
       border-radius: 26px;
 
+    }
+  }
+
+  .mobile-navbar {
+    display: none;
+
+    align-self: center;
+    justify-self: center;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+
+    @if variable_exists(action){
+      font-size: 4rem;
+    }
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: 2% 4%;
+    border-radius: 26px;
+
+    @include media('<=tablet') {
+      display: unset;
+    }
+
+    .navbar-open {
+      display: block;
+      cursor: pointer;
+
+      color: black;
+    }
+
+    .nav-expand {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 70px;
+      padding: 0;
+      background: #FFFFFF;
+      margin: 0;
+      display: none;
+      border-bottom: 1px solid #dfe5e8;
+      z-index: 10;
+
+      li {
+        display: block;
+
+        a {
+          padding: 15px 15px;
+          text-decoration: none;
+          color: #78909C;
+          display: block;
+          background: rgb(245, 249, 249);
+        }
+      }
     }
   }
 }

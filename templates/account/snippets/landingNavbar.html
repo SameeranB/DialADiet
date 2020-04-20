@@ -24,4 +24,35 @@
             <a href="{% url 'account_signup' %}" class="nav-link register">Register</a>
         {% endif %}
     </div>
+
+    <div class="mobile-navbar">
+        <a class="navbar-open" id="navbar-open">Menu</a>
+        <ul class="nav-expand" id="nav-expand">
+            <li><a href="#" class="nav-link">The Program</a></li>
+            <li><a href="#" class="nav-link">Pricing</a></li>
+            {#        <a href="#" class="nav-link">The Process</a>#}
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'account_logout' %}" class="nav-link logout">Log Out</a></li>
+
+            {% else %}
+                <li><a href="{% url 'account_login' %}" class="nav-link">Sign In</a></li>
+                <li><a href="{% url 'account_signup' %}" class="nav-link register">Register</a></li>
+            {% endif %}
+        </ul>
+    </div>
 </div>
+
+<script defer>
+    document.getElementById('navbar-open').addEventListener("click", () => {
+        console.log('toggle nav');
+        let display = window.getComputedStyle(document.getElementById('nav-expand')).display;
+        console.log(display)
+        document.getElementById('nav-expand').style.removeProperty('display'); /* [1] */
+        if (display === 'none') { /* [2] */
+            display = 'block';
+        } else {
+            display = 'none';
+        }
+        document.getElementById('nav-expand').style.display = display;
+    });
+</script>

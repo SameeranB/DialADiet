@@ -8,7 +8,7 @@
   background: #f2f2f2;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 3.5fr 1.5fr;
+  grid-template-columns: 3fr 2fr;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
@@ -39,18 +39,42 @@
   }
 }
 .navbar-wrapper .nav-link-wrapper {
-  display: grid;
+  display: none;
   align-items: center;
   justify-items: center;
   grid-template-columns: auto auto auto auto;
+}
+@media (min-width: 769px) {
+  .navbar-wrapper .nav-link-wrapper {
+    display: grid;
+  }
 }
 .navbar-wrapper .nav-link-wrapper .nav-link {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
-  font-size: 5.5rem;
   font-weight: 600;
   color: black;
+}
+@media (max-width: 1919px) {
+  .navbar-wrapper .nav-link-wrapper .nav-link {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar-wrapper .nav-link-wrapper .nav-link {
+    font-size: 5.2rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1439px) {
+  .navbar-wrapper .nav-link-wrapper .nav-link {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-wrapper .nav-link-wrapper .nav-link {
+    font-size: 1.5rem;
+  }
 }
 .navbar-wrapper .nav-link-wrapper .register {
   background-color: #03DD32;
@@ -65,6 +89,49 @@
   grid-column-start: 3;
   grid-column-end: 5;
   border-radius: 26px;
+}
+.navbar-wrapper .mobile-navbar {
+  display: none;
+  align-self: center;
+  justify-self: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-size: 4rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  padding: 2% 4%;
+  border-radius: 26px;
+}
+@media (max-width: 768px) {
+  .navbar-wrapper .mobile-navbar {
+    display: unset;
+  }
+}
+.navbar-wrapper .mobile-navbar .navbar-open {
+  display: block;
+  cursor: pointer;
+  color: black;
+}
+.navbar-wrapper .mobile-navbar .nav-expand {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 70px;
+  padding: 0;
+  background: #FFFFFF;
+  margin: 0;
+  display: none;
+  border-bottom: 1px solid #dfe5e8;
+  z-index: 10;
+}
+.navbar-wrapper .mobile-navbar .nav-expand li {
+  display: block;
+}
+.navbar-wrapper .mobile-navbar .nav-expand li a {
+  padding: 15px 15px;
+  text-decoration: none;
+  color: #78909C;
+  display: block;
+  background: #f5f9f9;
 }
 
 * {
