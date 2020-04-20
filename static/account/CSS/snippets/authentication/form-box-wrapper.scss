@@ -183,10 +183,13 @@
         font-family: "Poppins", sans-serif;
         list-style: none;
         text-align: center;
+
+        grid-column-start: 1;
+        grid-column-end: 3;
       }
 
       .error input, .error select {
-        border: 2px red solid;
+        display: none;
       }
 
       .input {
@@ -217,7 +220,7 @@
           @include media('>phone') {
             font-size: 3.5rem;
           }
-          @include media('>tablet'){
+          @include media('>tablet') {
             font-size: 4.5rem;
           }
 
@@ -277,15 +280,18 @@
       justify-items: center;
 
       .errorlist {
-        color: #f2f2f2;
+        color: firebrick;
         font-size: 4rem;
         font-family: "Poppins", sans-serif;
         list-style: none;
         text-align: center;
+
+        grid-column-start: 1;
+        grid-column-end: 3;
       }
 
       .error input, .error select {
-        border: 2px red solid;
+        display: none;
       }
 
       .input {
