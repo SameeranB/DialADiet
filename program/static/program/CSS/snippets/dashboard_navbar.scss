@@ -41,7 +41,7 @@
   .profile-wrapper {
 
     font-family: "Poppins", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
 
     align-self: center;
@@ -52,7 +52,7 @@
 
     :hover {
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-      border-radius: 26px;
+      border-radius: 5px;
 
     }
 
@@ -60,7 +60,7 @@
     .profile-text {
       display: flex;
 
-      padding: 6% 8%;
+      padding: 4% 10%;
 
       :hover {
         box-shadow: none;
