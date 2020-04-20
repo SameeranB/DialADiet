@@ -323,6 +323,11 @@ body .content .form-box-wrapper .login-form-wrapper .login-form .errorlist {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+@media (min-width: 769px) {
+  body .content .form-box-wrapper .login-form-wrapper .login-form .errorlist {
+    color: #f2f2f2;
+  }
+}
 body .content .form-box-wrapper .login-form-wrapper .login-form .error input, body .content .form-box-wrapper .login-form-wrapper .login-form .error select {
   display: none;
 }
@@ -402,6 +407,11 @@ body .content .form-box-wrapper .login-form-wrapper .signup-form .errorlist {
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 3;
+}
+@media (min-width: 769px) {
+  body .content .form-box-wrapper .login-form-wrapper .signup-form .errorlist {
+    color: #f2f2f2;
+  }
 }
 body .content .form-box-wrapper .login-form-wrapper .signup-form .error input, body .content .form-box-wrapper .login-form-wrapper .signup-form .error select {
   display: none;

@@ -179,6 +179,9 @@
 
       .errorlist {
         color: firebrick;
+        @include media('>tablet') {
+          color: #f2f2f2;
+        }
         font-size: 4rem;
         font-family: "Poppins", sans-serif;
         list-style: none;
@@ -281,6 +284,9 @@
 
       .errorlist {
         color: firebrick;
+        @include media('>tablet') {
+          color: #f2f2f2;
+        }
         font-size: 4rem;
         font-family: "Poppins", sans-serif;
         list-style: none;
