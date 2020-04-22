@@ -10,14 +10,19 @@
 {% endblock %}
 
 {% block body %}
-    {# Navbar #}
-    {% include 'account/snippets/landingNavbar.html' with logoColor="black" %}
 
-     {# Main Content #}
-    <div class="content">
-        {% include 'account/snippets/authentication/form-box-wrapper.html' with action='signup' %}
-    </div>
+        {# Navbar #}
+        {% include 'account/snippets/landingNavbar.html' with logoColor="black" %}
 
-    {% include 'account/snippets/authentication/other-options-wrapper.html' with action='signup' %}
+        {# Main Content #}
+        <div class="content">
+            {% include 'account/snippets/authentication/form-box-wrapper.html' with action='signup' %}
+        </div>
+
+        {% include 'account/snippets/authentication/other-options-wrapper.html' with action='signup' %}
+
+{% endblock %}
+
+{% block javascript %}
 
 {% endblock %}

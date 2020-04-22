@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +10,14 @@
     {% block head %}{% endblock %}
 </head>
 <body>
-{% block body %}
-{% endblock %}
+{% include 'global/loader.html' %}
+<div id="loader-wrapper" class="loader-wrapper">
+    {% block body %}
+    {% endblock %}
+</div>
+
+
+<script src="{% static 'global/js/loader.js' %}" defer></script>
 
 {% block javascript %}
 {% endblock %}

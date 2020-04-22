@@ -15,7 +15,7 @@ We Help You Maintain Your <span class="hero-heading-health">Health.</span>
         <div class="login-form-header">
             Dial-A-Diet
         </div>
-        <form class="login-form {% if action == "login" %} login-form {% else %} signup-form {% endif %}" method="POST"
+        <form onsubmit="activate_loader()" class="login-form {% if action == "login" %} login-form {% else %} signup-form {% endif %}" method="POST"
               action="{% if action == "login" %}{% url 'account_login' %}{% else %}{% url 'account_signup' %}{% endif %}">
             {% csrf_token %}
             {{ form }}

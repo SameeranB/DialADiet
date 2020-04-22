@@ -1,0 +1,19 @@
+.svg-wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background: #f2f2f2;
+}
+.svg-wrapper img {
+  width: 30%;
+}
+.svg-wrapper svg {
+  height: 20%;
+  width: 20%;
+}
+
+/*# sourceMappingURL=loader.css.map */

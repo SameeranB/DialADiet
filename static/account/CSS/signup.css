@@ -168,6 +168,23 @@ body {
   background: linear-gradient(#022954, #94B3C6) no-repeat;
   height: fit-content;
 }
+body .svg-wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background: #f2f2f2;
+}
+body .svg-wrapper img {
+  width: 30%;
+}
+body .svg-wrapper svg {
+  height: 20%;
+  width: 20%;
+}
 body .content {
   width: 100%;
   height: fit-content;

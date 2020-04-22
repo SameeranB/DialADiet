@@ -11,18 +11,23 @@
 {% endblock %}
 
 {% block body %}
-    {#  Navbar  #}
-    {% include 'account/snippets/landingNavbar.html' with logoColor="black" %}
 
-    {# Main Content #}
-    <div class="content">
+        {#  Navbar  #}
+        {% include 'account/snippets/landingNavbar.html' with logoColor="black" %}
 
-        {% include 'account/snippets/authentication/form-box-wrapper.html' with action='login' %}
+        {# Main Content #}
+        <div class="content">
 
-    </div>
+            {% include 'account/snippets/authentication/form-box-wrapper.html' with action='login' %}
 
-{% include 'account/snippets/authentication/other-options-wrapper.html' with action="login" %}
+        </div>
+
+        {% include 'account/snippets/authentication/other-options-wrapper.html' with action="login" %}
+
 
 {% endblock %}
 
+
+{% block javascript %}
+{% endblock %}
 
