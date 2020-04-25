@@ -1,0 +1,34 @@
+{% load static %}
+
+<div class="sidebar-wrapper">
+    <div class="sidebar-heading">
+        {{ heading }}
+    </div>
+
+    {% if heading == "Home" %}
+        <div class="option dashboard-option">
+            <img src="" alt="" class="option-icon dashboard-icon">
+            <span class="option-text dashboard-text"></span>
+        </div>
+        <div class="option diary-option">
+            <img src="" alt="" class="option-icon diary-icon">
+            <span class="option-text diary-text"></span>
+        </div>
+        <div class="option diets-option">
+            <img src="" alt="" class="option-icon diets-icon">
+            <span class="option-text diets-text"></span>
+        </div>
+        <div class="option logs-option">
+            <img src="" alt="" class="option-icon logs-icon">
+            <span class="option-text logs-text"></span>
+        </div>
+        <div class="option calendar-option">
+            <img src="" alt="" class="option-icon calendar-icon">
+            <span class="option-text calendar-text"></span>
+        </div>
+        <div class="option documents-option">
+            <img src="" alt="" class="option-icon documents-icon">
+            <span class="option-text documents-text"></span>
+        </div>
+    {% endif %}
+</div>

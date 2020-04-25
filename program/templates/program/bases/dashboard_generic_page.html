@@ -1,0 +1,25 @@
+{% extends 'program/bases/dashboard_base.html' %}
+
+
+{% block title %}
+
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+    {% include 'program/snippets/dashboard_sidebar.html' with heading="Menu" %}
+    <div class="content">
+        <div class="head-section">
+            {% block head-section %}
+
+            {% endblock %}
+        </div>
+
+        {% block sub-sections %}
+        {% endblock %}
+
+    </div>
+{% endblock %}
