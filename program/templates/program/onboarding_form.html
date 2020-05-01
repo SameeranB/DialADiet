@@ -5,4 +5,40 @@
 {% block title %}Welcome{% endblock %}
 
 {% block head %}
+    <link rel="stylesheet" href="{% static 'program/CSS/onboarding_form.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <section class="page-1">
+            <div class="page-heading">
+                Hey <span class="page-heading-name">{{ user.first_name }}</span>,
+            </div>
+            <div class="welcome-note">
+                Congratulations are in order. You've taken the first step in setting and then shattering your health
+                goals.
+                Be it weight, fat or recovery, we are with you in this and we're going to see you through.<br><br>
+                Before we can begin our journey, we need to get to know you better. Are you ready?
+            </div>
+            <div class="page-1-button">
+                Let's Do This!
+            </div>
+        </section>
+
+        <section class="page-2">
+            <div class="page-heading">
+                Let's Get To Know You Better
+            </div>
+            <div class="instructions-note">
+                This section is divided into 5 forms as shown below. Please fill all these 5 forms. There is no particular order and you don't have to do it all at once. The information you type will be saved and filled automatically the next time you log in.<br><br>
+                The forms require data that might take some time to procure, so you are not expected to fill them in one go. Take your time and provide us with the most accurate information possible. This will help us understand your situation better.
+            </div>
+            <div class="form-gallery">
+
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+{% block javascript %}
 {% endblock %}

@@ -1,0 +1,63 @@
+@import "bases/portal_base";
+@import "../../Helpers/include-media";
+
+
+.content {
+  height: 100%;
+  padding: 5%;
+
+  font-family: "Poppins", sans-serif;
+
+
+  .page-heading {
+    font-size: 4rem;
+
+    .page-heading-name {
+      color: #03DD32;
+    }
+  }
+
+  .welcome-note {
+    margin-top: 5%;
+    font-size: 2rem;
+  }
+
+  .page-1-button {
+
+
+    background-color: #03DD32;
+    color: #f2f2f2;
+
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+
+
+    border: none;
+    border-radius: 22px;
+
+    width: 20%;
+    margin: 15vh auto 0 auto;
+
+    cursor: pointer;
+  }
+
+  .instructions-note {
+    font-size: 1.5rem;
+  }
+
+  .form-gallery {
+    display: grid;
+
+  }
+
+  .page-1 {
+    display: block;
+  }
+
+  .page-2 {
+    display: none;
+  }
+
+
+}

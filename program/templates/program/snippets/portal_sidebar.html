@@ -1,13 +1,18 @@
 {% load static %}
 
+<button id="sidebar-pullout" class="sidebar-pullout">
+    Menu
+</button>
 <div id="sidebar" class="sidebar-wrapper">
+
     <div class="sidebar-heading">
         {{ heading }}
     </div>
 
     {% if heading == "Menu" %}
         <div class="option dashboard-option">
-            <img src="{% static 'program/assets/sidebar_icons/dashboard.svg' %}" alt="" class="option-icon dashboard-icon">
+            <img src="{% static 'program/assets/sidebar_icons/dashboard.svg' %}" alt=""
+                 class="option-icon dashboard-icon">
             <span class="option-text dashboard-text">Dashboard</span>
         </div>
         <div class="option diary-option">
@@ -23,12 +28,21 @@
             <span class="option-text logs-text">Logs</span>
         </div>
         <div class="option calendar-option">
-            <img src="{% static 'program/assets/sidebar_icons/calendar.svg' %}" alt="" class="option-icon calendar-icon">
+            <img src="{% static 'program/assets/sidebar_icons/calendar.svg' %}" alt=""
+                 class="option-icon calendar-icon">
             <span class="option-text calendar-text">Calendar</span>
         </div>
         <div class="option documents-option">
-            <img src="{% static 'program/assets/sidebar_icons/documents.svg' %}" alt="" class="option-icon documents-icon">
+            <img src="{% static 'program/assets/sidebar_icons/documents.svg' %}" alt=""
+                 class="option-icon documents-icon">
             <span class="option-text documents-text">Documents</span>
         </div>
     {% endif %}
+
+    <div class="option close-option" onclick="toggleSidebar()">
+        <img src="{% static 'program/assets/sidebar_icons/close.svg' %}" alt=""
+             class="option-icon close-icon">
+        <span class="option-text  close-text">CLOSE</span>
+    </div>
 </div>
+

@@ -7,7 +7,8 @@
 }
 @media (max-width: 437px) {
   .navbar-wrapper {
-    grid-template-columns: 2fr 1fr 6fr;
+    grid-template-columns: 2fr 6fr;
+    padding: 0 10%;
   }
 }
 @media (min-width: 438px) and (max-width: 1439px) {
@@ -24,16 +25,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6%;
 }
 @media (min-width: 438px) {
   .navbar-wrapper .navbar-logo-wrapper {
     background: #BAD3F5;
-  }
-}
-@media (max-width: 437px) {
-  .navbar-wrapper .navbar-logo-wrapper .navbar-logo {
-    padding: 0 10%;
   }
 }
 .navbar-wrapper .hamburger-wrapper {
@@ -41,6 +36,14 @@
   align-items: center;
   justify-content: flex-start;
   padding: 0 3%;
+}
+@media (max-width: 437px) {
+  .navbar-wrapper .hamburger-wrapper {
+    display: none;
+  }
+}
+.navbar-wrapper .hamburger-wrapper .hamburger {
+  cursor: pointer;
 }
 .navbar-wrapper .profile-wrapper {
   font-family: "Poppins", sans-serif;

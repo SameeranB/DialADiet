@@ -100,17 +100,40 @@ html body .inner-body {
     grid-template-columns: 4fr 2fr;
   }
 }
+html body .inner-body .sidebar-pullout {
+  display: none;
+  position: absolute;
+  top: 15vh;
+  border: none;
+  border-radius: 0 22px 22px 0;
+  width: 15%;
+  height: 10%;
+  font-family: "Poppins", sans-serif;
+  color: #f2f2f2;
+  font-weight: 600;
+  background-color: #333F46;
+}
+@media (max-width: 437px) {
+  html body .inner-body .sidebar-pullout {
+    display: block;
+  }
+}
 html body .inner-body .sidebar-wrapper {
   display: grid;
   background-color: #333F46;
   height: 100%;
   width: 100%;
   grid-template-columns: 1fr;
-  padding: 25% 25% 75% 25%;
+  padding: 10% 10% 75% 10%;
   font-family: "Poppins", sans-serif;
   color: #f2f2f2;
   align-items: center;
   justify-items: start;
+}
+@media (max-width: 437px) {
+  html body .inner-body .sidebar-wrapper {
+    display: none;
+  }
 }
 html body .inner-body .sidebar-wrapper .sidebar-heading {
   font-size: 1.5rem;
@@ -129,6 +152,9 @@ html body .inner-body .sidebar-wrapper .option .option-icon {
 html body .inner-body .sidebar-wrapper .option .option-text {
   font-weight: 600;
   justify-self: start;
+}
+html body .inner-body .sidebar-wrapper .close-option .close-text {
+  color: red;
 }
 html body .inner-body .content {
   width: 100%;

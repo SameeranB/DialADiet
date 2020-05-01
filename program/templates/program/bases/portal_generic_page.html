@@ -25,6 +25,15 @@
 {% endblock %}
 
 {% block javascript %}
+    <script src="{% static 'program/js/sidebar-init.js' %}" defer></script>
+    <script src="{% static 'program/js/sidebar-pullout.js' %}" defer></script>
     <script src="{% static 'program/js/sidebar-touch-to-hide.js' %}" defer></script>
-    <script src="{% static 'program/js/sidebar-width.js' %}" defer></script>
+    <script src="{% static 'program/js/hamburger.js' %}" defer></script>
+
+    <script>
+        window.onresize = function () {
+            setSidebarWidth()
+            setPulloutPosition()
+        }
+    </script>
 {% endblock %}
