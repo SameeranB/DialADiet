@@ -1,23 +1,42 @@
+@import "../../../Helpers/include-media";
+
 .navbar-wrapper {
 
-  position: fixed;
-  top: 0;
   width: 100%;
+
+  z-index: 10;
 
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 6fr;
 
+  @include media('<=phone') {
+    grid-template-columns: 2fr 6fr;
+    padding: 0 10%;
+  }
+
+  @include media('>phone', '<laptop'){
+    grid-template-columns: 2.343fr 1fr 6fr;
+  }
+
+  @include media('>=laptop') {
+    grid-template-columns: 1.235fr 1fr 6fr;
+
+  }
   background: #A1C4F5;
 
+
   .navbar-logo-wrapper {
-    background: #BAD3F5;
+
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 6%;
+
+    @include media('>phone') {
+      background: #BAD3F5;
+
+    }
 
     .navbar-logo {
 
@@ -27,13 +46,16 @@
   .hamburger-wrapper {
 
     display: flex;
+    @include media('<=phone'){
+      display: none;
+    }
     align-items: center;
     justify-content: flex-start;
 
     padding: 0 3%;
 
     .hamburger {
-
+      cursor: pointer;
     }
   }
 

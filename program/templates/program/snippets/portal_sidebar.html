@@ -1,0 +1,34 @@
+{% load static %}
+
+<div id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-heading">
+        {{ heading }}
+    </div>
+
+    {% if heading == "Menu" %}
+        <div class="option dashboard-option">
+            <img src="{% static 'program/assets/sidebar_icons/dashboard.svg' %}" alt="" class="option-icon dashboard-icon">
+            <span class="option-text dashboard-text">Dashboard</span>
+        </div>
+        <div class="option diary-option">
+            <img src="{% static 'program/assets/sidebar_icons/diary.svg' %}" alt="" class="option-icon diary-icon">
+            <span class="option-text diary-text">Diary</span>
+        </div>
+        <div class="option diets-option">
+            <img src="{% static 'program/assets/sidebar_icons/diets.svg' %}" alt="" class="option-icon diets-icon">
+            <span class="option-text diets-text">Diets</span>
+        </div>
+        <div class="option logs-option">
+            <img src="{% static 'program/assets/sidebar_icons/logs.svg' %}" alt="" class="option-icon logs-icon">
+            <span class="option-text logs-text">Logs</span>
+        </div>
+        <div class="option calendar-option">
+            <img src="{% static 'program/assets/sidebar_icons/calendar.svg' %}" alt="" class="option-icon calendar-icon">
+            <span class="option-text calendar-text">Calendar</span>
+        </div>
+        <div class="option documents-option">
+            <img src="{% static 'program/assets/sidebar_icons/documents.svg' %}" alt="" class="option-icon documents-icon">
+            <span class="option-text documents-text">Documents</span>
+        </div>
+    {% endif %}
+</div>

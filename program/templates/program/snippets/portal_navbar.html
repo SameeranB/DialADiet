@@ -1,11 +1,11 @@
 {% load static %}
 
 <div class="navbar-wrapper">
-    <div class="navbar-logo-wrapper">
+    <div id="logo-wrapper" class="navbar-logo-wrapper">
         <img src="{% static 'program/assets/dashboard_navbar_logo.svg' %}" alt="" class="navbar-logo">
     </div>
     <div class="hamburger-wrapper">
-        <img src="{% static 'program/assets/dashboard_navbar_hamburger.svg' %}" alt="" class="hamburger">
+        <img id="hamburger" src="{% static 'program/assets/dashboard_navbar_hamburger.svg' %}" alt="" class="hamburger">
     </div>
     <div class="profile-wrapper">
         <div class="profile-text">
@@ -14,7 +14,6 @@
         </div>
 
     </div>
-</div>
 
 <div class="profile-dropdown-wrapper">
     <ul class="profile-dropdown">
@@ -37,4 +36,4 @@
         </li>
     </ul>
 </div>
-
+</div>

@@ -1,0 +1,30 @@
+{% extends 'program/bases/portal_base.html' %}
+{% load static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+    {% include 'program/snippets/portal_sidebar.html' with heading="Menu" %}
+    <div id="content" class="content">
+        <div class="head-section">
+            {% block head-section %}
+
+            {% endblock %}
+        </div>
+
+        {% block sub-sections %}
+        {% endblock %}
+
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'program/js/sidebar-touch-to-hide.js' %}" defer></script>
+    <script src="{% static 'program/js/sidebar-width.js' %}" defer></script>
+{% endblock %}

@@ -10,15 +10,21 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'program/CSS/bases/dashboard_base.css' %}">
-
     {% block head %}
     {% endblock %}
 </head>
 
 <body>
 
-{% include 'program/snippets/dashboard_navbar.html' %}
+{% include 'program/snippets/portal_navbar.html' %}
+
+<div id="inner-body" class="inner-body">
+{% block body %}
+{% endblock %}
+</div>
+
+{% block javascript %}
+{% endblock %}
 
 </body>
 </html>
