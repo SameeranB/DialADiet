@@ -1,0 +1,16 @@
+{% extends 'account/bases/message_base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'account/CSS/bases/information_template.css' %}">
+{% endblock %}
+
+{% block container-title %}
+    Payment Pending
+{% endblock %}
+
+{% block container-body %}
+    Hey There {{ user.first_name }}, your payment is either pending or being processed. Please give us a day to confirm your payment status. If you have any queries, you can contact us at <a href="mailto:info@drmanishabandishti.com">info@drmanishabandishti.com</a>. We're excited to have you on-board.
+{% endblock %}

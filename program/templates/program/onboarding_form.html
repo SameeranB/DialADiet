@@ -6,11 +6,12 @@
 
 {% block head %}
     <link rel="stylesheet" href="{% static 'program/CSS/onboarding_form.css' %}">
+
 {% endblock %}
 
 {% block body %}
-    <div class="content">
-        <section class="page-1">
+    <div id="content" class="content">
+        <section id="page-1" class="page-1">
             <div class="page-heading">
                 Hey <span class="page-heading-name">{{ user.first_name }}</span>,
             </div>
@@ -20,25 +21,42 @@
                 Be it weight, fat or recovery, we are with you in this and we're going to see you through.<br><br>
                 Before we can begin our journey, we need to get to know you better. Are you ready?
             </div>
-            <div class="page-1-button">
+            <div class="page-1-button" onclick="moveTo2()">
                 Let's Do This!
             </div>
         </section>
 
-        <section class="page-2">
+        <section id="page-2" class="page-2">
             <div class="page-heading">
                 Let's Get To Know You Better
             </div>
             <div class="instructions-note">
-                This section is divided into 5 forms as shown below. Please fill all these 5 forms. There is no particular order and you don't have to do it all at once. The information you type will be saved and filled automatically the next time you log in.<br><br>
-                The forms require data that might take some time to procure, so you are not expected to fill them in one go. Take your time and provide us with the most accurate information possible. This will help us understand your situation better.
+                This section is divided into 5 forms as shown below. There is no
+                particular order and you don't have to do it all at once. The information you type will be saved automatically and
+                filled the next time you log in.<br><br>
+
             </div>
             <div class="form-gallery">
-
+                <div class="personal-info graphic">
+                    <img alt="Personal Information" src="{% static 'program/assets/form_graphics/personal_info.svg' %}">
+                </div>
+                <div class="personal-info graphic">
+                    <img alt="Personal Information" src="{% static 'program/assets/form_graphics/personal_medical_history.svg' %}">
+                </div>
+                <div class="personal-info graphic">
+                    <img alt="Personal Information" src="{% static 'program/assets/form_graphics/family_medical_history.svg' %}">
+                </div>
+                <div class="personal-info graphic">
+                    <img alt="Personal Information" src="{% static 'program/assets/form_graphics/associated_health_problems.svg' %}">
+                </div>
+                <div class="personal-info graphic">
+                    <img alt="Personal Information" src="{% static 'program/assets/form_graphics/daily_routine.svg' %}">
+                </div>
             </div>
         </section>
     </div>
 {% endblock %}
 
 {% block javascript %}
+    <script src="{% static 'program/js/onboarding_form.js' %}"></script>
 {% endblock %}

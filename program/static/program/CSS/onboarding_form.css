@@ -95,12 +95,24 @@ html body .profile-dropdown-wrapper {
 .content .page-heading {
   font-size: 4rem;
 }
+@media (max-width: 437px) {
+  .content .page-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0;
+  }
+}
 .content .page-heading .page-heading-name {
   color: #03DD32;
 }
 .content .welcome-note {
   margin-top: 5%;
-  font-size: 2rem;
+  font-size: 1.7rem;
+}
+@media (max-width: 437px) {
+  .content .welcome-note {
+    font-size: 1.3rem;
+  }
 }
 .content .page-1-button {
   background-color: #03DD32;
@@ -114,17 +126,56 @@ html body .profile-dropdown-wrapper {
   margin: 15vh auto 0 auto;
   cursor: pointer;
 }
+@media (max-width: 437px) {
+  .content .page-1-button {
+    width: 80%;
+    margin: 5vh auto 0 auto;
+  }
+}
 .content .instructions-note {
-  font-size: 1.5rem;
+  padding-top: 2.5%;
+  font-size: 1.7rem;
+}
+@media (max-width: 437px) {
+  .content .instructions-note {
+    font-size: 1.3rem;
+    text-align: justify;
+  }
 }
 .content .form-gallery {
+  padding-top: 5%;
+  height: 100%;
   display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1%;
+  align-items: center;
+  justify-items: center;
+}
+@media (max-width: 436px) {
+  .content .form-gallery {
+    grid-auto-flow: row;
+  }
+}
+.content .form-gallery .graphic {
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  padding: 10%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .content .page-1 {
   display: block;
 }
 .content .page-2 {
   display: none;
+}
+@media (max-width: 437px) {
+  .content .page-2 .page-heading {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=onboarding_form.css.map */
