@@ -146,18 +146,27 @@ html body .profile-dropdown-wrapper {
   padding-top: 5%;
   height: 100%;
   display: grid;
-  grid-auto-flow: column;
   grid-gap: 1%;
   align-items: center;
   justify-items: center;
 }
-@media (max-width: 436px) {
+@media (max-width: 768px) {
   .content .form-gallery {
     grid-auto-flow: row;
   }
 }
+@media (min-width: 769px) and (max-width: 1439px) {
+  .content .form-gallery {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1440px) {
+  .content .form-gallery {
+    grid-auto-flow: column;
+  }
+}
 .content .form-gallery .graphic {
-  width: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   display: flex;
   padding: 10%;
@@ -165,6 +174,16 @@ html body .profile-dropdown-wrapper {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+@media (max-width: 1440px) {
+  .content .form-gallery .graphic {
+    width: 100%;
+  }
+}
+@media (min-width: 1441px) {
+  .content .form-gallery .graphic {
+    width: 17vw;
+  }
 }
 .content .page-1 {
   display: block;

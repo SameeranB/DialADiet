@@ -37,20 +37,20 @@
 
             </div>
             <div class="form-gallery">
-                <div class="personal-info graphic">
+                <a class="personal-info graphic" href="{% url 'users:personal_information_form' %}" >
                     <img alt="Personal Information" src="{% static 'program/assets/form_graphics/personal_info.svg' %}">
+                </a>
+                <div class="personal-medical graphic">
+                    <img alt="Personal Medical History" src="{% static 'program/assets/form_graphics/personal_medical_history.svg' %}">
                 </div>
-                <div class="personal-info graphic">
-                    <img alt="Personal Information" src="{% static 'program/assets/form_graphics/personal_medical_history.svg' %}">
+                <div class="family-medical graphic">
+                    <img alt="Family Medical History" src="{% static 'program/assets/form_graphics/family_medical_history.svg' %}">
                 </div>
-                <div class="personal-info graphic">
-                    <img alt="Personal Information" src="{% static 'program/assets/form_graphics/family_medical_history.svg' %}">
+                <div class="associated-health-problems graphic">
+                    <img alt="Associated Health Problems" src="{% static 'program/assets/form_graphics/associated_health_problems.svg' %}">
                 </div>
-                <div class="personal-info graphic">
-                    <img alt="Personal Information" src="{% static 'program/assets/form_graphics/associated_health_problems.svg' %}">
-                </div>
-                <div class="personal-info graphic">
-                    <img alt="Personal Information" src="{% static 'program/assets/form_graphics/daily_routine.svg' %}">
+                <div class="daily-routine graphic">
+                    <img alt="Daily Routine" src="{% static 'program/assets/form_graphics/daily_routine.svg' %}">
                 </div>
             </div>
         </section>

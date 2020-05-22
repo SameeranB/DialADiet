@@ -135,6 +135,7 @@ class PersonalMedicalHistory(models.Model):
 
     ), blank=True)
     blood_report = models.FileField(blank=True)
+    childhood_obesity = models.BooleanField(blank=True)
 
 
 class AssociatedHealthProblems(models.Model):

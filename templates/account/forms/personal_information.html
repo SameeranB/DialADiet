@@ -1,0 +1,133 @@
+{% extends 'account/forms/form_base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Personal Information
+{% endblock %}
+
+{% block extra-head %}
+    <link rel="stylesheet" href="{% static 'account/CSS/forms/personal_information_form.css' %}"
+          xmlns="http://www.w3.org/1999/html">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+{% endblock %}
+
+
+{% block extra-body %}
+    <div class="content" id="content">
+
+        <div class="header-row">
+            <div class="page-title" v-html="currentTitle">
+            </div>
+            <div class="save-banner-wrapper">
+                <img class="save-banner-saving" id="saving"
+                     src="{% static 'account/Assets/forms/global/saving.svg' %}"/>
+                <img class="save-banner-saved" id="saved" src="{% static 'account/Assets/forms/global/saved.png' %}"/>
+            </div>
+        </div>
+
+        <div class="question-title-row">
+            <div class="question-wrapper" v-html="currentQuestionTitle">
+            </div>
+
+            <div class="question-number-wrapper">
+                <div class="question-number-instructions">
+                    You can use <i style="color: white;">Arrow Keys</i> to navigate this form.
+                </div>
+
+                <div class="question-number-arrows">
+                    <img @click="previousQuestion" class="up-arrow" id="up-arrow" alt="Up"
+                         src="{% static 'account/Assets/forms/global/upward_arrow.svg' %}">
+                    <img @click="nextQuestion" class="down-arrow" id="down-arrow" alt="Down"
+                         src="{% static 'account/Assets/forms/global/downward_arrow.svg' %}">
+                </div>
+
+                <div class="question-number-count">
+                    [[ questionNumber ]]/15
+                </div>
+            </div>
+        </div>
+
+        <div class="question-subtitle-row" v-html="currentQuestionSubtitle"></div>
+
+        <div class="answer-input-row" v-html="currentAnswerInput"></div>
+
+        <div class="answer-confirm-row" v-html="currentAnswerOptions">
+
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block javascript %}
+<script src="{% static 'account/js/forms/personal_information.js' %}"></script>
+    <script>
+        const app = new Vue(
+    {
+        delimiters: ['[[', ']]'],
+        el: '#content',
+        data: {
+            titles: {
+                1: '<span class="first-word"> P</span>ersonal <span class="second-word">I</span>nformation'
+            },
+
+            questionTitles: {
+                1: 'Let\'s get the basics out of the way, shall we?'
+            },
+
+            questionSubTitles: {
+                1: 'Your Profile Picture should be a good place to start.\n'
+            },
+
+            answerInputs: {
+                1: '  <img alt="Upload Profile Picture" class="profile-pic"\n' +
+                    '                 src="{% static 'account/Assets/forms/personal_info/profile_pic.svg' %}">\n' +
+                    '            <img alt="Upload Profile Picture" class="profile-pic-hover"\n' +
+                    '                 src="{% static 'account/Assets/forms/personal_info/profile_pic_hover.svg' %}">\n' +
+                    ''
+            },
+
+            answerOptions: {
+                1: '            <div class="option-no-profile-pic">\n' +
+                    '                    No, I don\'t want a profile picture.\n' +
+                    '            </div>\n' +
+                    '\n' +
+                    '            <div class="option-confirm-profile-pic">\n' +
+                    '                Yes this looks good. Let\'s move on...\n' +
+                    '            </div>'
+            },
+            questionNumber: 1
+
+        },
+
+        computed: {
+            currentTitle: function () {
+                console.log(this.titles[this.questionNumber])
+                return this.titles[this.questionNumber];
+            },
+
+            currentQuestionTitle: function () {
+                console.log(this.questionTitles[this.questionNumber])
+                return this.questionTitles[this.questionNumber];
+            },
+
+            currentQuestionSubtitle: function () {
+                console.log(this.questionSubTitles[this.questionNumber])
+                return this.questionSubTitles[this.questionNumber];
+            },
+
+            currentAnswerInput: function () {
+                console.log(this.answerInputs[this.questionNumber])
+                return this.answerInputs[this.questionNumber];
+            },
+
+            currentAnswerOptions: function () {
+                console.log(this.answerOptions[this.questionNumber])
+                return this.answerOptions[this.questionNumber]
+            }
+
+        }
+    }
+)
+    </script>
+{% endblock %}

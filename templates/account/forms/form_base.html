@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    {% block extra-head %}
+    {% endblock %}
+
+</head>
+<body>
+{% include 'program/snippets/portal_navbar.html' %}
+{% block extra-body %}
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
+
+</body>
+</html>

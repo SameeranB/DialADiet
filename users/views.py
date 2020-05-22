@@ -18,6 +18,10 @@ class OnBoardingView(TemplateView):
         return context
 
 
+class PersonalInformationFormView(TemplateView):
+    template_name = 'account/forms/personal_information.html'
+
+
 class PaymentPendingView(TemplateView):
     template_name = 'account/payment_pending.html'
 
@@ -27,6 +31,7 @@ class PaymentPendingView(TemplateView):
         return context
 
 
+# Todo: Add superuser redirect
 def authentication_redirect(request):
     user = User.objects.get(id=request.user.id)
     if user.on_boarding_complete:
